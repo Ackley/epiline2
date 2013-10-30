@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E8B858BF-4206-4F30-8267-A49B4E9FADD5}</ProjectGuid>
+    <RootNamespace>epiline</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\eigen;C:\Program Files %28x86%29\boost\boost_1_47;C:\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\boost\boost_1_47\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bundler_parser.cpp" />
+    <ClCompile Include="cameras.cpp" />
+    <ClCompile Include="CMPMVS_DATA.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="projection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base_class.h" />
+    <ClInclude Include="bundler_parser.h" />
+    <ClInclude Include="cameras.h" />
+    <ClInclude Include="CMPMVS_DATA.h" />
+    <ClInclude Include="ExImage.h" />
+    <ClInclude Include="projection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_calib3d243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_contrib243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_core243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_features2d243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_flann243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_gpu243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_haartraining_engined.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_highgui243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_imgproc243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_legacy243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_ml243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_nonfree243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_objdetect243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_photo243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_stitching243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_ts243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_video243d.lib" />
+    <Library Include="C:\opencv\build\x86\vc10\lib\d\opencv_videostab243d.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
