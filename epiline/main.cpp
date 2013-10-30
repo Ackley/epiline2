@@ -6,10 +6,15 @@
 #include "bundler_parser.h"
 #include "Cameras.h"
 
+
+
 int main(){
 	Camera cam;
 
-	cam.init("C:\\dataset\\data");
+	cam.init("G:\\epiline2\\epiline\\data");
+	cam.find_corner();
+
+
 	
 }
 
